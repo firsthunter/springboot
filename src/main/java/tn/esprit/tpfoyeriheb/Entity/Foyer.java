@@ -1,19 +1,27 @@
 package tn.esprit.tpfoyeriheb.Entity;
-import  jakarta.persistence.Entity ;
+
+
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
-public class Foyer {
+@Table(name = "Foyer")
+
+public class Foyer implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idFoyer;
+    @Column(name = "IDFoyer")
 
-    @Column (nullable = false)
-    private String nomfoyer ;
+    long idFoyer;
+    @Column(name = "nomFoyer")
 
-    @Column (nullable = false)
+    String nomFoyer;
+    @Column(name = "capacitefoyer")
 
-    private Long capaciteFoyer;
+    long capacitefoyer;
+
     @OneToOne(mappedBy = "foyer")
     private Universite universite;
 
