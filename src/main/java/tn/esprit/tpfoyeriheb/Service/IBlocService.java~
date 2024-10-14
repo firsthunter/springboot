@@ -1,0 +1,2 @@
+package tn.esprit.tpfoyeriheb.Service;public interface IBlocService {
+}

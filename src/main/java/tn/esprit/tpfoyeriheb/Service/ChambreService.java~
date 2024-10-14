@@ -1,0 +1,28 @@
+package tn.esprit.tpfoyeriheb.Service;
+
+import tn.esprit.tpfoyeriheb.Entity.Chambre;
+import tn.esprit.tpfoyeriheb.Reposotories.ChambreRepository;
+
+public class ChambreService implements IChambreService {
+   ChambreRepository ChambreRepository;
+
+    public Chambre addBloc(Chambre chambre){
+
+        return ChambreRepository.save(chambre);
+    }
+
+    public Chambre updateBloc(Chambre chambre){
+        return ChambreRepository.save(chambre);
+    }
+    public void deletUser(Chambre chambre){
+        ChambreRepository.delete(chambre);
+    }
+    public void deleteuserbyid(long id){
+        ChambreRepository.deleteById(id);
+    }
+
+    public void deletall(){
+        ChambreRepository.deleteAll();
+    }
+
+}

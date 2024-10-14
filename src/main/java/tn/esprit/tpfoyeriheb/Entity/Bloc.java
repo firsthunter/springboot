@@ -11,7 +11,7 @@ public class Bloc implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Idbloc")
-    private long idBloc; // Changed to follow Java naming conventions
+    private long idBloc;
 
     @Column(name = "NomBloc")
     private String nomBloc;
@@ -22,7 +22,7 @@ public class Bloc implements Serializable {
     @ManyToOne
     private Foyer foyer;
 
-    @OneToMany(mappedBy = "bloc") // Corrected mappedBy to refer to the 'bloc' property in Chambre
+    @OneToMany(mappedBy = "bloc")
     private Set<Chambre> chambre;
 
     // Getters and Setters (optional, but recommended)
